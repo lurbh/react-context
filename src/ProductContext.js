@@ -31,9 +31,16 @@ export default function ProductContextData(props)
         }]);
     };
 
+    function getProductByID(ProductParams)
+    {
+        const foundProduct = products.filter((p) => p.id === parseInt(ProductParams)) 
+        return foundProduct;
+    }
+
     const context = {
         getProducts: () => {return products;},
-        addProduct: addProduct
+        addProduct: addProduct,
+        getProductByID: getProductByID
     };
 
     return (
