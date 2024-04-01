@@ -10,7 +10,7 @@ export default function ProductListing()
         <>
             <ul>
                 {context.getProducts().map(product =>  (
-                    <li>{product.product_name}-${product.price}</li>
+                    <li key={product.id}>{product.product_name}-${product.price}</li>
                 ))}
             </ul>
             <AddProducts/>
